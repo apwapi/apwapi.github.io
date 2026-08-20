@@ -1,2 +1,3 @@
 # apwapi.github.io
-Public user site — ecommerce AI tools decision pages
+
+Live site: https://apwapi.github.io/
