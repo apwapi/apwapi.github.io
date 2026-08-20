@@ -1,0 +1,64 @@
+/* StackRail — editorial */
+:root {
+  --paper: #f3efe4;
+  --ink: #14120f;
+  --muted: #5a554c;
+  --faint: #8a8376;
+  --rule: #d2cbbd;
+  --card: #fffdf7;
+  --accent: #c2410c;
+  --accent-ink: #9a3412;
+  --max: 72rem;
+  --measure: 42rem;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, Helvetica, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+a { color: var(--accent-ink); text-underline-offset: 0.15em; }
+a:hover { color: var(--accent); }
+.wrap { width: min(var(--max), calc(100% - 2rem)); margin-inline: auto; }
+.mast { border-bottom: 1px solid var(--rule); }
+.mast-inner { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1rem 0 0.85rem; flex-wrap: wrap; }
+.wordmark { font-family: Georgia, Palatino, serif; font-weight: 700; font-size: 1.35rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+.wordmark span { color: var(--accent); }
+.tag { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; margin: 0.15rem 0 0; }
+nav.site { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; font-size: 0.92rem; }
+nav.site a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+nav.site a:hover, nav.site a[aria-current="page"] { border-bottom-color: var(--accent); }
+.rule-accent { height: 3px; background: var(--accent); }
+.kicker { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 650; margin: 0 0 0.6rem; }
+h1, h2, h3 { font-family: Georgia, Palatino, serif; line-height: 1.2; font-weight: 650; }
+h1 { font-size: clamp(1.85rem, 4vw, 2.65rem); margin: 0 0 0.75rem; }
+h2 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); margin: 2.4rem 0 0.7rem; }
+.deck { font-size: 1.2rem; line-height: 1.45; color: var(--muted); margin: 0 0 1rem; max-width: 40rem; }
+.meta { color: var(--faint); font-size: 0.88rem; margin: 0 0 1.4rem; }
+.article { padding: 2rem 0 3.5rem; }
+.article p { margin: 0 0 1rem; }
+.verdict { background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--accent); padding: 1.1rem 1.2rem; margin: 0 0 1.5rem; }
+.note { background: var(--card); border: 1px solid var(--rule); padding: 0.9rem 1rem; margin: 0 0 1.4rem; font-size: 0.95rem; color: var(--muted); }
+.jobs { display: grid; grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); gap: 0.75rem; margin: 1rem 0 1.6rem; }
+.job { display: block; background: var(--card); border: 1px solid var(--rule); padding: 0.95rem 1rem; text-decoration: none; color: inherit; }
+.job b { display: block; font-family: Georgia, serif; margin-bottom: 0.3rem; }
+.job span { color: var(--muted); font-size: 0.92rem; }
+.table-wrap { overflow-x: auto; margin: 0.6rem 0 1.4rem; border: 1px solid var(--rule); background: var(--card); }
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--rule); }
+th { background: #ebe6d8; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.dont { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1rem 0 1.5rem; }
+@media (max-width: 720px) { .dont { grid-template-columns: 1fr; } }
+.box { background: var(--card); border: 1px solid var(--rule); padding: 1rem; }
+.box.bad { border-top: 3px solid var(--ink); }
+.box.good { border-top: 3px solid var(--accent); }
+.cta { display: inline-block; margin: 0.2rem 0 1rem; padding: 0.55rem 0.9rem; background: var(--ink); color: var(--paper); text-decoration: none; }
+.related { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 0.75rem; }
+.related a { display: block; background: var(--card); border: 1px solid var(--rule); padding: 0.95rem 1rem; text-decoration: none; color: var(--ink); }
+footer.site { border-top: 3px solid var(--ink); padding: 1.6rem 0 2.4rem; color: var(--muted); font-size: 0.9rem; }
+.stamp { display: inline-block; border: 1px solid var(--ink); padding: 0.1rem 0.4rem; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.skip { position: absolute; left: 0.75rem; top: -3rem; }

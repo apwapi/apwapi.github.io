@@ -1,3 +1,5 @@
-# apwapi.github.io
+# StackRail
 
-Live site: https://apwapi.github.io/
+Live: https://apwapi.github.io/
+
+Decision-layer reviews of AI tools for ecommerce operators. Dated August 2026.
